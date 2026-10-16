@@ -19,12 +19,14 @@ import argparse
 import os
 import subprocess
 import sys
-import tempfile
 import time
 from pathlib import Path
 
 import geopandas as gpd
 import pyogrio
+import rasterio
+import rasterio.features
+from shapely.geometry import shape
 
 ROOT = Path(__file__).resolve().parents[1]
 AOI_GPKG = ROOT / "work" / "aoi" / "aoi.gpkg"
@@ -65,44 +67,13 @@ def clip_raster(src: Path, cd: str, out: Path) -> None:
 
 def canopy_polygons(landcover: Path, cd: str) -> gpd.GeoDataFrame:
     """Vectorise land-cover class 1 (tree canopy) into polygons."""
-    with tempfile.TemporaryDirectory() as td:
-        mask = Path(td) / "canopy.tif"
-        subprocess.run(
-            [
-                "gdal",
-                "raster",
-                "calc",
-                "--overwrite",
-                "-i",
-                f"lc={landcover}",
-                "--calc",
-                "(lc==1)*1",
-                "--output-data-type",
-                "Byte",
-                "--no-data",
-                "0",
-                "-o",
-                str(mask),
-            ],
-            check=True,
-            env=ENV,
+    with rasterio.open(landcover) as src:
+        canopy = (src.read(1) == 1).astype("uint8")
+        shapes = rasterio.features.shapes(
+            canopy, mask=canopy == 1, transform=src.transform
         )
-        shp = Path(td) / "canopy.gpkg"
-        subprocess.run(
-            [
-                "gdal_polygonize.py",
-                "-q",
-                str(mask),
-                "-f",
-                "GPKG",
-                str(shp),
-                "canopy",
-                "value",
-            ],
-            check=True,
-            env=ENV,
-        )
-        gdf = gpd.read_file(shp)
+        geoms = [shape(geom) for geom, _ in shapes]
+        gdf = gpd.GeoDataFrame(geometry=geoms, crs=src.crs)
     gdf["area_sqft"] = gdf.geometry.area
     gdf["source"] = "TNC/UVM 2021 land cover class 1 (tree canopy > 8 ft)"
     return gdf[["area_sqft", "source", "geometry"]]
@@ -140,7 +111,7 @@ def main(src: Path, cds: list[str]) -> None:
                 "tree_centroids"
                 if "centroid" in key
                 else "tree_crown_circles"
-                if "shape" in key
+                if "crowns" in key
                 else "tree_crown_objects"
             )
             g.to_file(gpkg, layer=lname)

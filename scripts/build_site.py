@@ -161,16 +161,30 @@ def fetch_script() -> str:
     urls = [f["url"] for f in MANIFEST["files"] if f.get("url")]
     if not urls:
         return ""
-    body = "\n".join(f'  "{u}"' for u in urls)
+    base = urls[0].rsplit("/", 1)[0]
+    total = fmt_bytes(sum(f["bytes"] for f in MANIFEST["files"]))
+    body = "\n".join(urls)
     return f"""#!/usr/bin/env bash
-# Download the whole package (~{fmt_bytes(sum(f["bytes"] for f in MANIFEST["files"]))}) into ./generative-canopy-data
-set -e
+# Download the whole Generative Canopy package (~{total}) into ./generative-canopy-data
+# and verify SHA-256 checksums against manifest.json. Resumable: rerun to continue.
+set -euo pipefail
 mkdir -p generative-canopy-data && cd generative-canopy-data
-for u in \\
+curl -sSL -o manifest.json "{base}/manifest.json"
+while read -r u; do
+  [ -n "$u" ] && curl -L -O -C - --retry 5 --retry-all-errors "$u"
+done <<'URLS'
 {body}
-do curl -L -O -C - --retry 5 "$u"; done
-curl -L -O "{MANIFEST["files"][0]["url"].rsplit("/", 1)[0]}/manifest.json"
-sha256sum -c <(python3 -c "import json;[print(f['sha256'],' ',f['file']) for f in json.load(open('manifest.json'))['files']]")"""
+URLS
+python3 - <<'PY'
+import hashlib, json
+bad = 0
+for f in json.load(open("manifest.json"))["files"]:
+    h = hashlib.sha256(open(f["file"], "rb").read()).hexdigest()
+    ok = h == f["sha256"]; bad += not ok
+    print(("OK  " if ok else "FAIL"), f["file"])
+raise SystemExit(bad)
+PY
+"""
 
 
 def main() -> None:
