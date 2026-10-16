@@ -1,0 +1,624 @@
+{
+ "generated": "2026-10-16",
+ "crs": "EPSG:2263 (NAD83 / New York Long Island, US survey feet); elevations in meters NAVD88 (EPSG:5703)",
+ "buffer_m": 300,
+ "districts": {
+  "202": {
+   "code": "Bx2",
+   "name": "Hunts Point, Longwood & Morrisania (Bronx CD 2)"
+  },
+  "305": {
+   "code": "Bk5",
+   "name": "East New York, Cypress Hills & Starrett City (Brooklyn CD 5)"
+  },
+  "404": {
+   "code": "Qn4",
+   "name": "Corona & Elmhurst (Queens CD 4)"
+  }
+ },
+ "files": [
+  {
+   "district": "202",
+   "district_code": "Bx2",
+   "file": "dtm_2017_50cm_m_202.tif",
+   "bytes": 105686811,
+   "sha256": "699a8781898de3e11b1afc9c807be1190939a9f368bf511e48a7122e44c95197",
+   "requested_layer": "DTM",
+   "title": "Digital Terrain Model (bare earth, hydro-flattened), 50 cm, meters NAVD88",
+   "source": "NYC OTI 2017 Topobathymetric LiDAR - Bare Earth DEM, NOAA Digital Coast copy (ID 9307)",
+   "vintage": "Lidar flown 3-17 May 2017",
+   "license": "NYC Open Data Terms of Use (public domain)",
+   "url": null,
+   "type": "raster",
+   "format": "Cloud-Optimized GeoTIFF",
+   "size_px": [
+    7337,
+    8705
+   ],
+   "pixel_size_ft": [
+    1.640416667,
+    1.640416667
+   ],
+   "pixel_size_m": [
+    0.5,
+    0.5
+   ],
+   "bands": 1,
+   "dtype": "Float32",
+   "nodata": -9999.0,
+   "crs": "COMPOUNDCRS[\"NAD83 / New York Long Islan",
+   "bbox_wgs84": [
+    [
+     [
+      -73.9079939,
+      40.8321352
+     ],
+     [
+      -73.9080481,
+      40.792941
+     ],
+     [
+      -73.8645814,
+      40.7928981
+     ],
+     [
+      -73.8645016,
+      40.8320923
+     ],
+     [
+      -73.9079939,
+      40.8321352
+     ]
+    ]
+   ]
+  },
+  {
+   "district": "202",
+   "district_code": "Bx2",
+   "file": "naip_2022_leafon_60cm_rgbnir_202.tif",
+   "bytes": 98997786,
+   "sha256": "abb0ad42c4749bf958db6c6504963ce01e280b7fa5ba6d441d2c1a8fb9500966",
+   "requested_layer": "Orthophoto (leaf-on reference)",
+   "title": "NAIP 2022 summer, 60 cm, 4-band R-G-B-NIR",
+   "source": "USDA NAIP via Microsoft Planetary Computer",
+   "vintage": "Flown 19 Jul and 15 Sep 2022, leaf-on",
+   "license": "Public domain (USDA)",
+   "url": null,
+   "type": "raster",
+   "format": "Cloud-Optimized GeoTIFF",
+   "size_px": [
+    6114,
+    7254
+   ],
+   "pixel_size_ft": [
+    1.968503937,
+    1.968503937
+   ],
+   "pixel_size_m": [
+    0.6,
+    0.6
+   ],
+   "bands": 4,
+   "dtype": "Byte",
+   "nodata": 0,
+   "crs": 2263,
+   "bbox_wgs84": [
+    [
+     [
+      -73.9079949,
+      40.8321365
+     ],
+     [
+      -73.9080491,
+      40.7929431
+     ],
+     [
+      -73.8645835,
+      40.7929003
+     ],
+     [
+      -73.8645037,
+      40.8320936
+     ],
+     [
+      -73.9079949,
+      40.8321365
+     ]
+    ]
+   ]
+  },
+  {
+   "district": "202",
+   "district_code": "Bx2",
+   "file": "ortho_2024_20cm_rgbnir_202.tif",
+   "bytes": 764955988,
+   "sha256": "6d50590deeec68e36e9f0a8c386f1c9bfec98d441a8a0b763faddd0aa150818d",
+   "requested_layer": "Orthophoto",
+   "title": "Orthophoto 2024, 20 cm, 4-band R-G-B-NIR",
+   "source": "NYS GIS Program Office / NYC OTI 2024 NYC orthoimagery (6 in source), NYS GIS Clearinghouse",
+   "vintage": "Flown 14-24 March 2024, leaf-off, true ortho",
+   "license": "Public domain (NYS ITS)",
+   "url": null,
+   "type": "raster",
+   "format": "Cloud-Optimized GeoTIFF",
+   "size_px": [
+    18342,
+    21760
+   ],
+   "pixel_size_ft": [
+    0.656166667,
+    0.656166667
+   ],
+   "pixel_size_m": [
+    0.2,
+    0.2
+   ],
+   "bands": 4,
+   "dtype": "Byte",
+   "nodata": 0,
+   "crs": 2263,
+   "bbox_wgs84": [
+    [
+     [
+      -73.9079951,
+      40.8321334
+     ],
+     [
+      -73.9080493,
+      40.7929437
+     ],
+     [
+      -73.8645838,
+      40.7929008
+     ],
+     [
+      -73.864504,
+      40.8320905
+     ],
+     [
+      -73.9079951,
+      40.8321334
+     ]
+    ]
+   ]
+  },
+  {
+   "district": "202",
+   "district_code": "Bx2",
+   "file": "vectors_202.gpkg",
+   "bytes": 17985536,
+   "sha256": "59d05f1b4992a7ce0d9013784732971d6ac275ad6b5c057928e52bda90ee5402",
+   "requested_layer": "Land use, open space, building footprints, tree trunks",
+   "title": "Building footprints, MapPLUTO land use, planimetric sidewalk/roadbed/median/plazas, parks, DOT plazas, POPS, GreenThumb gardens, LION streets, active Forestry tree points",
+   "source": "NYC Open Data (OTI, DCP, DPR, DOT); DCP ArcGIS services",
+   "vintage": "Snapshot fetched 2026-10-16",
+   "license": "NYC Open Data Terms of Use (public domain)",
+   "url": null,
+   "type": "vector",
+   "format": "GeoPackage",
+   "crs": "EPSG:2263",
+   "layers": {
+    "aoi_buffer300m": {
+     "features": 1,
+     "geometry": "Polygon"
+    },
+    "cd_boundary": {
+     "features": 1,
+     "geometry": "Multi Polygon"
+    },
+    "building_footprints": {
+     "features": 5994,
+     "geometry": "Multi Polygon"
+    },
+    "planimetric_sidewalk": {
+     "features": 529,
+     "geometry": "Multi Polygon"
+    },
+    "planimetric_roadbed": {
+     "features": 1137,
+     "geometry": "Multi Polygon"
+    },
+    "planimetric_median": {
+     "features": 399,
+     "geometry": "Multi Polygon"
+    },
+    "parks_properties": {
+     "features": 45,
+     "geometry": "Multi Polygon"
+    },
+    "dot_pedestrian_plazas": {
+     "features": 2,
+     "geometry": "Multi Polygon"
+    },
+    "privately_owned_public_spaces": {
+     "features": 1,
+     "geometry": "Point"
+    },
+    "greenthumb_gardens": {
+     "features": 18,
+     "geometry": "Multi Polygon"
+    },
+    "forestry_tree_points": {
+     "features": 10546,
+     "geometry": "Point"
+    },
+    "mappluto": {
+     "features": 4860,
+     "geometry": "Multi Polygon"
+    },
+    "lion_streets": {
+     "features": 3081,
+     "geometry": "Line String"
+    },
+    "planimetric_public_plazas": {
+     "features": 38,
+     "geometry": "Polygon"
+    }
+   }
+  },
+  {
+   "district": "305",
+   "district_code": "Bk5",
+   "file": "dtm_2017_50cm_m_305.tif",
+   "bytes": 255180451,
+   "sha256": "b335fda469e3bdaeecad68ddfa8984076a2a2a2abf14110402392d1f0d35c5a6",
+   "requested_layer": "DTM",
+   "title": "Digital Terrain Model (bare earth, hydro-flattened), 50 cm, meters NAVD88",
+   "source": "NYC OTI 2017 Topobathymetric LiDAR - Bare Earth DEM, NOAA Digital Coast copy (ID 9307)",
+   "vintage": "Lidar flown 3-17 May 2017",
+   "license": "NYC Open Data Terms of Use (public domain)",
+   "url": null,
+   "type": "raster",
+   "format": "Cloud-Optimized GeoTIFF",
+   "size_px": [
+    9383,
+    13494
+   ],
+   "pixel_size_ft": [
+    1.640416667,
+    1.640416667
+   ],
+   "pixel_size_m": [
+    0.5,
+    0.5
+   ],
+   "bands": 1,
+   "dtype": "Float32",
+   "nodata": -9999.0,
+   "crs": "COMPOUNDCRS[\"NAD83 / New York Long Islan",
+   "bbox_wgs84": [
+    [
+     [
+      -73.90757,
+      40.6978876
+     ],
+     [
+      -73.9076543,
+      40.63713
+     ],
+     [
+      -73.8521961,
+      40.637072
+     ],
+     [
+      -73.8520614,
+      40.6978296
+     ],
+     [
+      -73.90757,
+      40.6978876
+     ]
+    ]
+   ]
+  },
+  {
+   "district": "305",
+   "district_code": "Bk5",
+   "file": "naip_2022_leafon_60cm_rgbnir_305.tif",
+   "bytes": 202747085,
+   "sha256": "7376792995effcdb0debf147e9a3495b76e3ff2424c444f1f9aca8418b9bc0a0",
+   "requested_layer": "Orthophoto (leaf-on reference)",
+   "title": "NAIP 2022 summer, 60 cm, 4-band R-G-B-NIR",
+   "source": "USDA NAIP via Microsoft Planetary Computer",
+   "vintage": "Flown 19 Jul and 15 Sep 2022, leaf-on",
+   "license": "Public domain (USDA)",
+   "url": null,
+   "type": "raster",
+   "format": "Cloud-Optimized GeoTIFF",
+   "size_px": [
+    7820,
+    11245
+   ],
+   "pixel_size_ft": [
+    1.968503937,
+    1.968503937
+   ],
+   "pixel_size_m": [
+    0.6,
+    0.6
+   ],
+   "bands": 4,
+   "dtype": "Byte",
+   "nodata": 0,
+   "crs": 2263,
+   "bbox_wgs84": [
+    [
+     [
+      -73.9075698,
+      40.6978869
+     ],
+     [
+      -73.9076541,
+      40.6371291
+     ],
+     [
+      -73.8521899,
+      40.6370711
+     ],
+     [
+      -73.8520551,
+      40.6978289
+     ],
+     [
+      -73.9075698,
+      40.6978869
+     ]
+    ]
+   ]
+  },
+  {
+   "district": "305",
+   "district_code": "Bk5",
+   "file": "vectors_305.gpkg",
+   "bytes": 57516032,
+   "sha256": "475a6fe878908d565757cfbf62c65700326a47734d2329584e00830b5d3580bc",
+   "requested_layer": "Land use, open space, building footprints, tree trunks",
+   "title": "Building footprints, MapPLUTO land use, planimetric sidewalk/roadbed/median/plazas, parks, DOT plazas, POPS, GreenThumb gardens, LION streets, active Forestry tree points",
+   "source": "NYC Open Data (OTI, DCP, DPR, DOT); DCP ArcGIS services",
+   "vintage": "Snapshot fetched 2026-10-16",
+   "license": "NYC Open Data Terms of Use (public domain)",
+   "url": null,
+   "type": "vector",
+   "format": "GeoPackage",
+   "crs": "EPSG:2263",
+   "layers": {
+    "aoi_buffer300m": {
+     "features": 1,
+     "geometry": "Polygon"
+    },
+    "cd_boundary": {
+     "features": 1,
+     "geometry": "Multi Polygon"
+    },
+    "building_footprints": {
+     "features": 29527,
+     "geometry": "Multi Polygon"
+    },
+    "planimetric_sidewalk": {
+     "features": 1529,
+     "geometry": "Multi Polygon"
+    },
+    "planimetric_roadbed": {
+     "features": 3324,
+     "geometry": "Multi Polygon"
+    },
+    "planimetric_median": {
+     "features": 583,
+     "geometry": "Multi Polygon"
+    },
+    "parks_properties": {
+     "features": 91,
+     "geometry": "Multi Polygon"
+    },
+    "dot_pedestrian_plazas": {
+     "features": 2,
+     "geometry": "Multi Polygon"
+    },
+    "greenthumb_gardens": {
+     "features": 65,
+     "geometry": "Multi Polygon"
+    },
+    "forestry_tree_points": {
+     "features": 24546,
+     "geometry": "Point"
+    },
+    "mappluto": {
+     "features": 25409,
+     "geometry": "Multi Polygon"
+    },
+    "lion_streets": {
+     "features": 6990,
+     "geometry": "Line String"
+    },
+    "planimetric_public_plazas": {
+     "features": 19,
+     "geometry": "Polygon"
+    }
+   }
+  },
+  {
+   "district": "404",
+   "district_code": "Qn4",
+   "file": "dtm_2017_50cm_m_404.tif",
+   "bytes": 122897828,
+   "sha256": "e96a1d4d9b96f5ffe212714addaf3a4d37326e74ed4a34280bcf5ca6c9bae1f8",
+   "requested_layer": "DTM",
+   "title": "Digital Terrain Model (bare earth, hydro-flattened), 50 cm, meters NAVD88",
+   "source": "NYC OTI 2017 Topobathymetric LiDAR - Bare Earth DEM, NOAA Digital Coast copy (ID 9307)",
+   "vintage": "Lidar flown 3-17 May 2017",
+   "license": "NYC Open Data Terms of Use (public domain)",
+   "url": null,
+   "type": "raster",
+   "format": "Cloud-Optimized GeoTIFF",
+   "size_px": [
+    9132,
+    6646
+   ],
+   "pixel_size_ft": [
+    1.640416667,
+    1.640416667
+   ],
+   "pixel_size_m": [
+    0.5,
+    0.5
+   ],
+   "bands": 1,
+   "dtype": "Float32",
+   "nodata": -9999.0,
+   "crs": "COMPOUNDCRS[\"NAD83 / New York Long Islan",
+   "bbox_wgs84": [
+    [
+     [
+      -73.8979867,
+      40.7555075
+     ],
+     [
+      -73.8980326,
+      40.7255837
+     ],
+     [
+      -73.8439864,
+      40.7255232
+     ],
+     [
+      -73.8439163,
+      40.7554469
+     ],
+     [
+      -73.8979867,
+      40.7555075
+     ]
+    ]
+   ]
+  },
+  {
+   "district": "404",
+   "district_code": "Qn4",
+   "file": "naip_2022_leafon_60cm_rgbnir_404.tif",
+   "bytes": 102637659,
+   "sha256": "d86894a5066dc7f1c40e3dd403c78108f520f2d2a950385583ff9953014e8509",
+   "requested_layer": "Orthophoto (leaf-on reference)",
+   "title": "NAIP 2022 summer, 60 cm, 4-band R-G-B-NIR",
+   "source": "USDA NAIP via Microsoft Planetary Computer",
+   "vintage": "Flown 19 Jul and 15 Sep 2022, leaf-on",
+   "license": "Public domain (USDA)",
+   "url": null,
+   "type": "raster",
+   "format": "Cloud-Optimized GeoTIFF",
+   "size_px": [
+    7611,
+    5539
+   ],
+   "pixel_size_ft": [
+    1.968503937,
+    1.968503937
+   ],
+   "pixel_size_m": [
+    0.6,
+    0.6
+   ],
+   "bands": 4,
+   "dtype": "Byte",
+   "nodata": 0,
+   "crs": 2263,
+   "bbox_wgs84": [
+    [
+     [
+      -73.89799,
+      40.7555078
+     ],
+     [
+      -73.8980359,
+      40.7255803
+     ],
+     [
+      -73.8439825,
+      40.7255198
+     ],
+     [
+      -73.8439124,
+      40.7554472
+     ],
+     [
+      -73.89799,
+      40.7555078
+     ]
+    ]
+   ]
+  },
+  {
+   "district": "404",
+   "district_code": "Qn4",
+   "file": "vectors_404.gpkg",
+   "bytes": 37253120,
+   "sha256": "32f4e6e70027617d7a44e9deeababef488dfbbe97a9b784c667a469fd38f4827",
+   "requested_layer": "Land use, open space, building footprints, tree trunks",
+   "title": "Building footprints, MapPLUTO land use, planimetric sidewalk/roadbed/median/plazas, parks, DOT plazas, POPS, GreenThumb gardens, LION streets, active Forestry tree points",
+   "source": "NYC Open Data (OTI, DCP, DPR, DOT); DCP ArcGIS services",
+   "vintage": "Snapshot fetched 2026-10-16",
+   "license": "NYC Open Data Terms of Use (public domain)",
+   "url": null,
+   "type": "vector",
+   "format": "GeoPackage",
+   "crs": "EPSG:2263",
+   "layers": {
+    "aoi_buffer300m": {
+     "features": 1,
+     "geometry": "Polygon"
+    },
+    "cd_boundary": {
+     "features": 1,
+     "geometry": "Multi Polygon"
+    },
+    "building_footprints": {
+     "features": 19411,
+     "geometry": "Multi Polygon"
+    },
+    "planimetric_sidewalk": {
+     "features": 889,
+     "geometry": "Multi Polygon"
+    },
+    "planimetric_roadbed": {
+     "features": 2060,
+     "geometry": "Multi Polygon"
+    },
+    "planimetric_median": {
+     "features": 324,
+     "geometry": "Multi Polygon"
+    },
+    "parks_properties": {
+     "features": 43,
+     "geometry": "Multi Polygon"
+    },
+    "dot_pedestrian_plazas": {
+     "features": 2,
+     "geometry": "Multi Polygon"
+    },
+    "privately_owned_public_spaces": {
+     "features": 1,
+     "geometry": "Point"
+    },
+    "greenthumb_gardens": {
+     "features": 5,
+     "geometry": "Multi Polygon"
+    },
+    "forestry_tree_points": {
+     "features": 14549,
+     "geometry": "Point"
+    },
+    "mappluto": {
+     "features": 17092,
+     "geometry": "Multi Polygon"
+    },
+    "lion_streets": {
+     "features": 4304,
+     "geometry": "Line String"
+    },
+    "planimetric_public_plazas": {
+     "features": 28,
+     "geometry": "Polygon"
+    }
+   }
+  }
+ ]
+}
