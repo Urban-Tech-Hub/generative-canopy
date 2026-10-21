@@ -59,10 +59,25 @@ def soda_fetch(
     clauses = [f"within_box({geom},{maxy},{minx},{miny},{maxx})"]
     if where:
         clauses.append(where)
+    where_sql = " AND ".join(clauses)
+    # Offset paging is only stable with an explicit $order (SODA otherwise
+    # returns rows in arbitrary order per request, skipping and duplicating).
+    expected = int(
+        requests.get(
+            SODA.format(id=ds),
+            params={"$select": "count(*)", "$where": where_sql},
+            timeout=180,
+        ).json()[0]["count"]
+    )
     feats: list[dict] = []
     offset, page = 0, 5000
     while True:
-        params = {"$where": " AND ".join(clauses), "$limit": page, "$offset": offset}
+        params = {
+            "$where": where_sql,
+            "$order": ":id",
+            "$limit": page,
+            "$offset": offset,
+        }
         for attempt in range(5):
             r = requests.get(SODA.format(id=ds), params=params, timeout=180)
             if r.ok:
@@ -74,6 +89,10 @@ def soda_fetch(
         if len(rows) < page:
             break
         offset += page
+    if len(feats) != expected:
+        raise RuntimeError(
+            f"{ds}: fetched {len(feats)} rows, server reports {expected}"
+        )
     if not feats:
         return gpd.GeoDataFrame(geometry=[], crs="EPSG:4326")
     geoms = [shape(f.pop(geom)) if f.get(geom) else None for f in feats]

@@ -16,6 +16,8 @@ MANIFEST = json.loads((DOCS / "manifest.json").read_text())
 NOTES = (DOCS / "NOTES.md").read_text()
 
 ORDER = [
+    "dsm_2021_50cm_m",
+    "dtm_2021_50cm_m",
     "dsm_2017_50cm_m",
     "dtm_2017_50cm_m",
     "ortho_2024_20cm_rgbnir",

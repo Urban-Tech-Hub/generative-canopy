@@ -12,7 +12,7 @@ import hashlib
 import json
 import subprocess
 import sys
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -30,15 +30,29 @@ DISTRICTS = {
 
 # filename prefix -> (requested layer, title, source, vintage, license)
 LAYERS = {
-    "dsm_2017_50cm_m": (
+    "dsm_2021_50cm_m": (
         "DSM",
+        "Digital Surface Model 2021 (highest return), 50 cm, meters NAVD88",
+        "NYC 2021 lidar (EagleView for NYC OTI), LAS tiles hosted by NYS ITS GIS (ftp.gis.ny.gov), gridded by this project",
+        "Lidar flown 12-21 May 2021, leaf-on emerging",
+        "Public domain (NYC / NYS ITS)",
+    ),
+    "dtm_2021_50cm_m": (
+        "DTM",
+        "Digital Terrain Model 2021 (ground-classified returns, holes interpolated), 50 cm, meters NAVD88",
+        "NYC 2021 lidar (EagleView for NYC OTI), LAS tiles hosted by NYS ITS GIS (ftp.gis.ny.gov), gridded by this project",
+        "Lidar flown 12-21 May 2021",
+        "Public domain (NYC / NYS ITS)",
+    ),
+    "dsm_2017_50cm_m": (
+        "DSM (2017, superseded)",
         "Digital Surface Model, 50 cm, meters NAVD88",
         "NYC OTI 2017 Topobathymetric LiDAR - Highest Hit DSM (NYC Open Data 7sc8-jtbz)",
         "Lidar flown 3-17 May 2017, 50% leaf-off",
         "NYC Open Data Terms of Use (public domain)",
     ),
     "dtm_2017_50cm_m": (
-        "DTM",
+        "DTM (2017, superseded)",
         "Digital Terrain Model (bare earth, hydro-flattened), 50 cm, meters NAVD88",
         "NYC OTI 2017 Topobathymetric LiDAR - Bare Earth DEM, NOAA Digital Coast copy (ID 9307)",
         "Lidar flown 3-17 May 2017",
@@ -83,7 +97,7 @@ LAYERS = {
         "Land use, open space, building footprints, tree trunks",
         "Building footprints, MapPLUTO land use, planimetric sidewalk/roadbed/median/plazas, parks, DOT plazas, POPS, GreenThumb gardens, LION streets, active Forestry tree points",
         "NYC Open Data (OTI, DCP, DPR, DOT); DCP ArcGIS services",
-        f"Snapshot fetched {date.today().isoformat()}",
+        "Snapshot fetched VECTOR_DATE",
         "NYC Open Data Terms of Use (public domain)",
     ),
 }
@@ -168,6 +182,11 @@ def main(release_base: str | None) -> None:
         if key is None or cd not in DISTRICTS:
             continue
         req, title, source, vintage, lic = LAYERS[key]
+        if key == "vectors":
+            vintage = vintage.replace(
+                "VECTOR_DATE",
+                datetime.fromtimestamp(p.stat().st_mtime).date().isoformat(),
+            )
         info = (
             raster_info(p)
             if p.suffix == ".tif"

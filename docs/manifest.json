@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-16",
+ "generated": "2026-10-21",
  "crs": "EPSG:2263 (NAD83 / New York Long Island, US survey feet); elevations in meters NAVD88 (EPSG:5703)",
  "buffer_m": 300,
  "districts": {
@@ -28,7 +28,7 @@
    "source": "The Nature Conservancy / UVM Spatial Analysis Lab (Zenodo 10.5281/zenodo.14053441)",
    "vintage": "2017 vs 2021",
    "license": "CC BY-NC-SA 4.0",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/canopy_change_2017_2021_6in_202.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/canopy_change_2017_2021_6in_202.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -78,12 +78,67 @@
    "file": "dsm_2017_50cm_m_202.tif",
    "bytes": 148365165,
    "sha256": "46317e08246552a509280d3f6ce253b6ea40a3cb8d7385c2bb1a31828a19b77a",
-   "requested_layer": "DSM",
+   "requested_layer": "DSM (2017, superseded)",
    "title": "Digital Surface Model, 50 cm, meters NAVD88",
    "source": "NYC OTI 2017 Topobathymetric LiDAR - Highest Hit DSM (NYC Open Data 7sc8-jtbz)",
    "vintage": "Lidar flown 3-17 May 2017, 50% leaf-off",
    "license": "NYC Open Data Terms of Use (public domain)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/dsm_2017_50cm_m_202.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/dsm_2017_50cm_m_202.tif",
+   "type": "raster",
+   "format": "Cloud-Optimized GeoTIFF",
+   "size_px": [
+    7337,
+    8705
+   ],
+   "pixel_size_ft": [
+    1.640416667,
+    1.640416667
+   ],
+   "pixel_size_m": [
+    0.5,
+    0.5
+   ],
+   "bands": 1,
+   "dtype": "Float32",
+   "nodata": -9999.0,
+   "crs": "COMPOUNDCRS[\"NAD83 / New York Long Islan",
+   "bbox_wgs84": [
+    [
+     [
+      -73.9079939,
+      40.8321352
+     ],
+     [
+      -73.9080481,
+      40.792941
+     ],
+     [
+      -73.8645814,
+      40.7928981
+     ],
+     [
+      -73.8645016,
+      40.8320923
+     ],
+     [
+      -73.9079939,
+      40.8321352
+     ]
+    ]
+   ]
+  },
+  {
+   "district": "202",
+   "district_code": "Bx2",
+   "file": "dsm_2021_50cm_m_202.tif",
+   "bytes": 134758611,
+   "sha256": "cc8153ea7115097d8177fba732282ee8de7d477cf81a29ec33ea320b07046214",
+   "requested_layer": "DSM",
+   "title": "Digital Surface Model 2021 (highest return), 50 cm, meters NAVD88",
+   "source": "NYC 2021 lidar (EagleView for NYC OTI), LAS tiles hosted by NYS ITS GIS (ftp.gis.ny.gov), gridded by this project",
+   "vintage": "Lidar flown 12-21 May 2021, leaf-on emerging",
+   "license": "Public domain (NYC / NYS ITS)",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/dsm_2021_50cm_m_202.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -133,12 +188,67 @@
    "file": "dtm_2017_50cm_m_202.tif",
    "bytes": 105686811,
    "sha256": "699a8781898de3e11b1afc9c807be1190939a9f368bf511e48a7122e44c95197",
-   "requested_layer": "DTM",
+   "requested_layer": "DTM (2017, superseded)",
    "title": "Digital Terrain Model (bare earth, hydro-flattened), 50 cm, meters NAVD88",
    "source": "NYC OTI 2017 Topobathymetric LiDAR - Bare Earth DEM, NOAA Digital Coast copy (ID 9307)",
    "vintage": "Lidar flown 3-17 May 2017",
    "license": "NYC Open Data Terms of Use (public domain)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/dtm_2017_50cm_m_202.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/dtm_2017_50cm_m_202.tif",
+   "type": "raster",
+   "format": "Cloud-Optimized GeoTIFF",
+   "size_px": [
+    7337,
+    8705
+   ],
+   "pixel_size_ft": [
+    1.640416667,
+    1.640416667
+   ],
+   "pixel_size_m": [
+    0.5,
+    0.5
+   ],
+   "bands": 1,
+   "dtype": "Float32",
+   "nodata": -9999.0,
+   "crs": "COMPOUNDCRS[\"NAD83 / New York Long Islan",
+   "bbox_wgs84": [
+    [
+     [
+      -73.9079939,
+      40.8321352
+     ],
+     [
+      -73.9080481,
+      40.792941
+     ],
+     [
+      -73.8645814,
+      40.7928981
+     ],
+     [
+      -73.8645016,
+      40.8320923
+     ],
+     [
+      -73.9079939,
+      40.8321352
+     ]
+    ]
+   ]
+  },
+  {
+   "district": "202",
+   "district_code": "Bx2",
+   "file": "dtm_2021_50cm_m_202.tif",
+   "bytes": 123178449,
+   "sha256": "1c36f2b649c840ca1bedbd5ffb864be7644152be00d10c5e3bd2be12184726d2",
+   "requested_layer": "DTM",
+   "title": "Digital Terrain Model 2021 (ground-classified returns, holes interpolated), 50 cm, meters NAVD88",
+   "source": "NYC 2021 lidar (EagleView for NYC OTI), LAS tiles hosted by NYS ITS GIS (ftp.gis.ny.gov), gridded by this project",
+   "vintage": "Lidar flown 12-21 May 2021",
+   "license": "Public domain (NYC / NYS ITS)",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/dtm_2021_50cm_m_202.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -193,7 +303,7 @@
    "source": "The Nature Conservancy / UVM Spatial Analysis Lab (Zenodo 10.5281/zenodo.14053441)",
    "vintage": "2021 lidar + 2021 NAIP + 2022 NYS ortho",
    "license": "CC BY-NC-SA 4.0",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/landcover_2021_6in_202.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/landcover_2021_6in_202.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -248,7 +358,7 @@
    "source": "USDA NAIP via Microsoft Planetary Computer",
    "vintage": "Flown 19 Jul and 15 Sep 2022, leaf-on",
    "license": "Public domain (USDA)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/naip_2022_leafon_60cm_rgbnir_202.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/naip_2022_leafon_60cm_rgbnir_202.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -303,7 +413,7 @@
    "source": "NYS GIS Program Office / NYC OTI 2024 NYC orthoimagery (6 in source), NYS GIS Clearinghouse",
    "vintage": "Flown 14-24 March 2024, leaf-off, true ortho",
    "license": "Public domain (NYS ITS)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/ortho_2024_20cm_rgbnir_202.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/ortho_2024_20cm_rgbnir_202.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -358,7 +468,7 @@
    "source": "The Nature Conservancy / UVM Spatial Analysis Lab (Zenodo 10.5281/zenodo.14053441)",
    "vintage": "2021",
    "license": "CC BY-NC-SA 4.0",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/tree_canopy_2021_202.gpkg",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/tree_canopy_2021_202.gpkg",
    "type": "vector",
    "format": "GeoPackage",
    "crs": "EPSG:2263",
@@ -385,14 +495,14 @@
    "district": "202",
    "district_code": "Bx2",
    "file": "vectors_202.gpkg",
-   "bytes": 17985536,
-   "sha256": "59d05f1b4992a7ce0d9013784732971d6ac275ad6b5c057928e52bda90ee5402",
+   "bytes": 17297408,
+   "sha256": "b084129a61eb410beed87756ab7a78c2c8647400bcdcc7e521cdfb6e95f94ae4",
    "requested_layer": "Land use, open space, building footprints, tree trunks",
    "title": "Building footprints, MapPLUTO land use, planimetric sidewalk/roadbed/median/plazas, parks, DOT plazas, POPS, GreenThumb gardens, LION streets, active Forestry tree points",
    "source": "NYC Open Data (OTI, DCP, DPR, DOT); DCP ArcGIS services",
-   "vintage": "Snapshot fetched 2026-10-16",
+   "vintage": "Snapshot fetched 2026-10-18",
    "license": "NYC Open Data Terms of Use (public domain)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/vectors_202.gpkg",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/vectors_202.gpkg",
    "type": "vector",
    "format": "GeoPackage",
    "crs": "EPSG:2263",
@@ -406,7 +516,7 @@
      "geometry": "Multi Polygon"
     },
     "building_footprints": {
-     "features": 5994,
+     "features": 5003,
      "geometry": "Multi Polygon"
     },
     "planimetric_sidewalk": {
@@ -438,7 +548,7 @@
      "geometry": "Multi Polygon"
     },
     "forestry_tree_points": {
-     "features": 10546,
+     "features": 9894,
      "geometry": "Point"
     },
     "mappluto": {
@@ -466,7 +576,7 @@
    "source": "The Nature Conservancy / UVM Spatial Analysis Lab (Zenodo 10.5281/zenodo.14053441)",
    "vintage": "2017 vs 2021",
    "license": "CC BY-NC-SA 4.0",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/canopy_change_2017_2021_6in_305.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/canopy_change_2017_2021_6in_305.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -516,12 +626,67 @@
    "file": "dsm_2017_50cm_m_305.tif",
    "bytes": 297176572,
    "sha256": "c0591df90c95040858c56cca985dc0c20121bed86f69d8e53191ccbf23691bcb",
-   "requested_layer": "DSM",
+   "requested_layer": "DSM (2017, superseded)",
    "title": "Digital Surface Model, 50 cm, meters NAVD88",
    "source": "NYC OTI 2017 Topobathymetric LiDAR - Highest Hit DSM (NYC Open Data 7sc8-jtbz)",
    "vintage": "Lidar flown 3-17 May 2017, 50% leaf-off",
    "license": "NYC Open Data Terms of Use (public domain)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/dsm_2017_50cm_m_305.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/dsm_2017_50cm_m_305.tif",
+   "type": "raster",
+   "format": "Cloud-Optimized GeoTIFF",
+   "size_px": [
+    9383,
+    13494
+   ],
+   "pixel_size_ft": [
+    1.640416667,
+    1.640416667
+   ],
+   "pixel_size_m": [
+    0.5,
+    0.5
+   ],
+   "bands": 1,
+   "dtype": "Float32",
+   "nodata": -9999.0,
+   "crs": "COMPOUNDCRS[\"NAD83 / New York Long Islan",
+   "bbox_wgs84": [
+    [
+     [
+      -73.90757,
+      40.6978876
+     ],
+     [
+      -73.9076543,
+      40.63713
+     ],
+     [
+      -73.8521961,
+      40.637072
+     ],
+     [
+      -73.8520614,
+      40.6978296
+     ],
+     [
+      -73.90757,
+      40.6978876
+     ]
+    ]
+   ]
+  },
+  {
+   "district": "305",
+   "district_code": "Bk5",
+   "file": "dsm_2021_50cm_m_305.tif",
+   "bytes": 286853852,
+   "sha256": "c0f746f25926c6d9efe4de649bae97f1945d0cf3f3bbed3e7ab52cbcecceed90",
+   "requested_layer": "DSM",
+   "title": "Digital Surface Model 2021 (highest return), 50 cm, meters NAVD88",
+   "source": "NYC 2021 lidar (EagleView for NYC OTI), LAS tiles hosted by NYS ITS GIS (ftp.gis.ny.gov), gridded by this project",
+   "vintage": "Lidar flown 12-21 May 2021, leaf-on emerging",
+   "license": "Public domain (NYC / NYS ITS)",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/dsm_2021_50cm_m_305.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -571,12 +736,67 @@
    "file": "dtm_2017_50cm_m_305.tif",
    "bytes": 255180451,
    "sha256": "b335fda469e3bdaeecad68ddfa8984076a2a2a2abf14110402392d1f0d35c5a6",
-   "requested_layer": "DTM",
+   "requested_layer": "DTM (2017, superseded)",
    "title": "Digital Terrain Model (bare earth, hydro-flattened), 50 cm, meters NAVD88",
    "source": "NYC OTI 2017 Topobathymetric LiDAR - Bare Earth DEM, NOAA Digital Coast copy (ID 9307)",
    "vintage": "Lidar flown 3-17 May 2017",
    "license": "NYC Open Data Terms of Use (public domain)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/dtm_2017_50cm_m_305.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/dtm_2017_50cm_m_305.tif",
+   "type": "raster",
+   "format": "Cloud-Optimized GeoTIFF",
+   "size_px": [
+    9383,
+    13494
+   ],
+   "pixel_size_ft": [
+    1.640416667,
+    1.640416667
+   ],
+   "pixel_size_m": [
+    0.5,
+    0.5
+   ],
+   "bands": 1,
+   "dtype": "Float32",
+   "nodata": -9999.0,
+   "crs": "COMPOUNDCRS[\"NAD83 / New York Long Islan",
+   "bbox_wgs84": [
+    [
+     [
+      -73.90757,
+      40.6978876
+     ],
+     [
+      -73.9076543,
+      40.63713
+     ],
+     [
+      -73.8521961,
+      40.637072
+     ],
+     [
+      -73.8520614,
+      40.6978296
+     ],
+     [
+      -73.90757,
+      40.6978876
+     ]
+    ]
+   ]
+  },
+  {
+   "district": "305",
+   "district_code": "Bk5",
+   "file": "dtm_2021_50cm_m_305.tif",
+   "bytes": 260022595,
+   "sha256": "6b4a42e7b632eeea2d785cee4ff6be58045777176b7f998493464128917c896e",
+   "requested_layer": "DTM",
+   "title": "Digital Terrain Model 2021 (ground-classified returns, holes interpolated), 50 cm, meters NAVD88",
+   "source": "NYC 2021 lidar (EagleView for NYC OTI), LAS tiles hosted by NYS ITS GIS (ftp.gis.ny.gov), gridded by this project",
+   "vintage": "Lidar flown 12-21 May 2021",
+   "license": "Public domain (NYC / NYS ITS)",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/dtm_2021_50cm_m_305.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -631,7 +851,7 @@
    "source": "The Nature Conservancy / UVM Spatial Analysis Lab (Zenodo 10.5281/zenodo.14053441)",
    "vintage": "2021 lidar + 2021 NAIP + 2022 NYS ortho",
    "license": "CC BY-NC-SA 4.0",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/landcover_2021_6in_305.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/landcover_2021_6in_305.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -686,7 +906,7 @@
    "source": "USDA NAIP via Microsoft Planetary Computer",
    "vintage": "Flown 19 Jul and 15 Sep 2022, leaf-on",
    "license": "Public domain (USDA)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/naip_2022_leafon_60cm_rgbnir_305.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/naip_2022_leafon_60cm_rgbnir_305.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -741,7 +961,7 @@
    "source": "NYS GIS Program Office / NYC OTI 2024 NYC orthoimagery (6 in source), NYS GIS Clearinghouse",
    "vintage": "Flown 14-24 March 2024, leaf-off, true ortho",
    "license": "Public domain (NYS ITS)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/ortho_2024_20cm_rgbnir_305.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/ortho_2024_20cm_rgbnir_305.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -796,7 +1016,7 @@
    "source": "The Nature Conservancy / UVM Spatial Analysis Lab (Zenodo 10.5281/zenodo.14053441)",
    "vintage": "2021",
    "license": "CC BY-NC-SA 4.0",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/tree_canopy_2021_305.gpkg",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/tree_canopy_2021_305.gpkg",
    "type": "vector",
    "format": "GeoPackage",
    "crs": "EPSG:2263",
@@ -823,14 +1043,14 @@
    "district": "305",
    "district_code": "Bk5",
    "file": "vectors_305.gpkg",
-   "bytes": 57516032,
-   "sha256": "475a6fe878908d565757cfbf62c65700326a47734d2329584e00830b5d3580bc",
+   "bytes": 56606720,
+   "sha256": "fc2a75d5fbe3d7bba5708c0587a5005024fdb875a86752a7ab1c1d125c33c23a",
    "requested_layer": "Land use, open space, building footprints, tree trunks",
    "title": "Building footprints, MapPLUTO land use, planimetric sidewalk/roadbed/median/plazas, parks, DOT plazas, POPS, GreenThumb gardens, LION streets, active Forestry tree points",
    "source": "NYC Open Data (OTI, DCP, DPR, DOT); DCP ArcGIS services",
-   "vintage": "Snapshot fetched 2026-10-16",
+   "vintage": "Snapshot fetched 2026-10-18",
    "license": "NYC Open Data Terms of Use (public domain)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/vectors_305.gpkg",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/vectors_305.gpkg",
    "type": "vector",
    "format": "GeoPackage",
    "crs": "EPSG:2263",
@@ -844,7 +1064,7 @@
      "geometry": "Multi Polygon"
     },
     "building_footprints": {
-     "features": 29527,
+     "features": 28099,
      "geometry": "Multi Polygon"
     },
     "planimetric_sidewalk": {
@@ -872,7 +1092,7 @@
      "geometry": "Multi Polygon"
     },
     "forestry_tree_points": {
-     "features": 24546,
+     "features": 23820,
      "geometry": "Point"
     },
     "mappluto": {
@@ -900,7 +1120,7 @@
    "source": "The Nature Conservancy / UVM Spatial Analysis Lab (Zenodo 10.5281/zenodo.14053441)",
    "vintage": "2017 vs 2021",
    "license": "CC BY-NC-SA 4.0",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/canopy_change_2017_2021_6in_404.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/canopy_change_2017_2021_6in_404.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -950,12 +1170,67 @@
    "file": "dsm_2017_50cm_m_404.tif",
    "bytes": 144728083,
    "sha256": "8f287fa29c1b0995504fd0af5281f214edf270d04aaa02b0f6850beeb7bf60e7",
-   "requested_layer": "DSM",
+   "requested_layer": "DSM (2017, superseded)",
    "title": "Digital Surface Model, 50 cm, meters NAVD88",
    "source": "NYC OTI 2017 Topobathymetric LiDAR - Highest Hit DSM (NYC Open Data 7sc8-jtbz)",
    "vintage": "Lidar flown 3-17 May 2017, 50% leaf-off",
    "license": "NYC Open Data Terms of Use (public domain)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/dsm_2017_50cm_m_404.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/dsm_2017_50cm_m_404.tif",
+   "type": "raster",
+   "format": "Cloud-Optimized GeoTIFF",
+   "size_px": [
+    9132,
+    6646
+   ],
+   "pixel_size_ft": [
+    1.640416667,
+    1.640416667
+   ],
+   "pixel_size_m": [
+    0.5,
+    0.5
+   ],
+   "bands": 1,
+   "dtype": "Float32",
+   "nodata": -9999.0,
+   "crs": "COMPOUNDCRS[\"NAD83 / New York Long Islan",
+   "bbox_wgs84": [
+    [
+     [
+      -73.8979867,
+      40.7555075
+     ],
+     [
+      -73.8980326,
+      40.7255837
+     ],
+     [
+      -73.8439864,
+      40.7255232
+     ],
+     [
+      -73.8439163,
+      40.7554469
+     ],
+     [
+      -73.8979867,
+      40.7555075
+     ]
+    ]
+   ]
+  },
+  {
+   "district": "404",
+   "district_code": "Qn4",
+   "file": "dsm_2021_50cm_m_404.tif",
+   "bytes": 138197083,
+   "sha256": "5af1bbaf651e6529aa6582b2f899d78e8ecfa0959d09e5c0d4709634d463daeb",
+   "requested_layer": "DSM",
+   "title": "Digital Surface Model 2021 (highest return), 50 cm, meters NAVD88",
+   "source": "NYC 2021 lidar (EagleView for NYC OTI), LAS tiles hosted by NYS ITS GIS (ftp.gis.ny.gov), gridded by this project",
+   "vintage": "Lidar flown 12-21 May 2021, leaf-on emerging",
+   "license": "Public domain (NYC / NYS ITS)",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/dsm_2021_50cm_m_404.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -1005,12 +1280,67 @@
    "file": "dtm_2017_50cm_m_404.tif",
    "bytes": 122897828,
    "sha256": "e96a1d4d9b96f5ffe212714addaf3a4d37326e74ed4a34280bcf5ca6c9bae1f8",
-   "requested_layer": "DTM",
+   "requested_layer": "DTM (2017, superseded)",
    "title": "Digital Terrain Model (bare earth, hydro-flattened), 50 cm, meters NAVD88",
    "source": "NYC OTI 2017 Topobathymetric LiDAR - Bare Earth DEM, NOAA Digital Coast copy (ID 9307)",
    "vintage": "Lidar flown 3-17 May 2017",
    "license": "NYC Open Data Terms of Use (public domain)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/dtm_2017_50cm_m_404.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/dtm_2017_50cm_m_404.tif",
+   "type": "raster",
+   "format": "Cloud-Optimized GeoTIFF",
+   "size_px": [
+    9132,
+    6646
+   ],
+   "pixel_size_ft": [
+    1.640416667,
+    1.640416667
+   ],
+   "pixel_size_m": [
+    0.5,
+    0.5
+   ],
+   "bands": 1,
+   "dtype": "Float32",
+   "nodata": -9999.0,
+   "crs": "COMPOUNDCRS[\"NAD83 / New York Long Islan",
+   "bbox_wgs84": [
+    [
+     [
+      -73.8979867,
+      40.7555075
+     ],
+     [
+      -73.8980326,
+      40.7255837
+     ],
+     [
+      -73.8439864,
+      40.7255232
+     ],
+     [
+      -73.8439163,
+      40.7554469
+     ],
+     [
+      -73.8979867,
+      40.7555075
+     ]
+    ]
+   ]
+  },
+  {
+   "district": "404",
+   "district_code": "Qn4",
+   "file": "dtm_2021_50cm_m_404.tif",
+   "bytes": 123532027,
+   "sha256": "0084ca17f9efe0fbe66b9edb40972861310f9b57d4465ab3f96b287b4cc91f0c",
+   "requested_layer": "DTM",
+   "title": "Digital Terrain Model 2021 (ground-classified returns, holes interpolated), 50 cm, meters NAVD88",
+   "source": "NYC 2021 lidar (EagleView for NYC OTI), LAS tiles hosted by NYS ITS GIS (ftp.gis.ny.gov), gridded by this project",
+   "vintage": "Lidar flown 12-21 May 2021",
+   "license": "Public domain (NYC / NYS ITS)",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/dtm_2021_50cm_m_404.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -1065,7 +1395,7 @@
    "source": "The Nature Conservancy / UVM Spatial Analysis Lab (Zenodo 10.5281/zenodo.14053441)",
    "vintage": "2021 lidar + 2021 NAIP + 2022 NYS ortho",
    "license": "CC BY-NC-SA 4.0",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/landcover_2021_6in_404.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/landcover_2021_6in_404.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -1120,7 +1450,7 @@
    "source": "USDA NAIP via Microsoft Planetary Computer",
    "vintage": "Flown 19 Jul and 15 Sep 2022, leaf-on",
    "license": "Public domain (USDA)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/naip_2022_leafon_60cm_rgbnir_404.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/naip_2022_leafon_60cm_rgbnir_404.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -1175,7 +1505,7 @@
    "source": "NYS GIS Program Office / NYC OTI 2024 NYC orthoimagery (6 in source), NYS GIS Clearinghouse",
    "vintage": "Flown 14-24 March 2024, leaf-off, true ortho",
    "license": "Public domain (NYS ITS)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/ortho_2024_20cm_rgbnir_404.tif",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/ortho_2024_20cm_rgbnir_404.tif",
    "type": "raster",
    "format": "Cloud-Optimized GeoTIFF",
    "size_px": [
@@ -1230,7 +1560,7 @@
    "source": "The Nature Conservancy / UVM Spatial Analysis Lab (Zenodo 10.5281/zenodo.14053441)",
    "vintage": "2021",
    "license": "CC BY-NC-SA 4.0",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/tree_canopy_2021_404.gpkg",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/tree_canopy_2021_404.gpkg",
    "type": "vector",
    "format": "GeoPackage",
    "crs": "EPSG:2263",
@@ -1257,14 +1587,14 @@
    "district": "404",
    "district_code": "Qn4",
    "file": "vectors_404.gpkg",
-   "bytes": 37253120,
-   "sha256": "32f4e6e70027617d7a44e9deeababef488dfbbe97a9b784c667a469fd38f4827",
+   "bytes": 37462016,
+   "sha256": "657b3d1fb32b018bfe1d93b643bdd4d377805579d6ba227a687a568e727aaa15",
    "requested_layer": "Land use, open space, building footprints, tree trunks",
    "title": "Building footprints, MapPLUTO land use, planimetric sidewalk/roadbed/median/plazas, parks, DOT plazas, POPS, GreenThumb gardens, LION streets, active Forestry tree points",
    "source": "NYC Open Data (OTI, DCP, DPR, DOT); DCP ArcGIS services",
-   "vintage": "Snapshot fetched 2026-10-16",
+   "vintage": "Snapshot fetched 2026-10-18",
    "license": "NYC Open Data Terms of Use (public domain)",
-   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.0-pilot/vectors_404.gpkg",
+   "url": "https://github.com/Urban-Tech-Hub/generative-canopy/releases/download/v1.1/vectors_404.gpkg",
    "type": "vector",
    "format": "GeoPackage",
    "crs": "EPSG:2263",
@@ -1278,7 +1608,7 @@
      "geometry": "Multi Polygon"
     },
     "building_footprints": {
-     "features": 19411,
+     "features": 21036,
      "geometry": "Multi Polygon"
     },
     "planimetric_sidewalk": {
@@ -1310,7 +1640,7 @@
      "geometry": "Multi Polygon"
     },
     "forestry_tree_points": {
-     "features": 14549,
+     "features": 13577,
      "geometry": "Point"
     },
     "mappluto": {

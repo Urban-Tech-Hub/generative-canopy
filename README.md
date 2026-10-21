@@ -14,8 +14,9 @@ the notes that describe their sources and caveats ([`docs/NOTES.md`](docs/NOTES.
 
 | Requested | File | Source |
 |---|---|---|
-| DSM 50 cm | `dsm_2017_50cm_m_<cd>.tif` | NYC 2017 lidar Highest Hit (NYC Open Data) |
-| DTM 50 cm | `dtm_2017_50cm_m_<cd>.tif` | NYC 2017 lidar bare earth (NOAA Digital Coast mirror) |
+| DSM 50 cm | `dsm_2021_50cm_m_<cd>.tif` | NYC 2021 lidar, highest return (LAS from NYS ITS FTP, gridded here) |
+| DTM 50 cm | `dtm_2021_50cm_m_<cd>.tif` | NYC 2021 lidar, ground returns (same) |
+| DSM / DTM 2017 (kept for change detection) | `dsm_2017_50cm_m_<cd>.tif`, `dtm_2017_50cm_m_<cd>.tif` | NYC 2017 lidar Highest Hit (NYC Open Data); bare earth (NOAA Digital Coast mirror) |
 | Orthophoto 20 cm + NIR | `ortho_2024_20cm_rgbnir_<cd>.tif` | NYS GIS Clearinghouse, NYC 2024 6-inch 4-band |
 | Leaf-on reference | `naip_2022_leafon_60cm_rgbnir_<cd>.tif` | USDA NAIP July/Sept 2022 |
 | Tree canopy polygons, crowns, tree points (all trees) | `tree_canopy_2021_<cd>.gpkg` | TNC / UVM 2021 (Zenodo 14053441, CC BY-NC-SA) |
@@ -29,7 +30,10 @@ All in EPSG:2263, elevations in meters NAVD88, clipped to the district + 300 m b
 ```bash
 uv sync
 uv run python scripts/fetch_vectors.py          # Socrata / ArcGIS vectors -> package/<cd>/vectors_<cd>.gpkg
-uv run python scripts/build_elevation.py --dsm-dir <unzipped Highest_Hit>   # DTM from NOAA S3, DSM from city zip
+uv run python scripts/build_elevation.py --dsm-dir <unzipped Highest_Hit>   # 2017 DTM from NOAA S3, DSM from city zip
+uv run python scripts/index_las_2021.py         # which 2021 LAS tiles cover each district
+scripts/fetch_las_2021.sh                        # 2021 LAS tiles (46 GB for the three districts) from ftp.gis.ny.gov
+uv run python scripts/build_elevation_2021.py   # 2021 DSM/DTM from the LAS tiles (needs `brew install pdal`)
 uv run python scripts/build_ortho.py            # 2024 tiles out of the NYS borough zips -> 20 cm COG
 uv run python scripts/build_naip.py             # leaf-on NAIP via Planetary Computer STAC
 uv run python scripts/build_canopy.py --src <folder with the three Zenodo files>
